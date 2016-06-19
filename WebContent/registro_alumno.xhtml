@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+		<h:form>
+			<h2>Registro Alumno</h2>
+			<h:panelGrid columns="2">		
+				<h:outputText value="Nombre Alumno:"/>
+				<h:inputText value="#{alumnoManagedBean.alumno.nombre}"></h:inputText>
+
+				<h:outputText value="Apellido Paterno"/>
+				<h:inputText value="#{alumnoManagedBean.alumno.apellidoPaterno}"></h:inputText>
+					
+				<h:outputText value="Apellido Materno"/>
+				<h:inputText value="#{alumnoManagedBean.alumno.apellidoMaterno}"></h:inputText>
+				
+				<h:outputText value="Codigo Alumno"/>
+				<h:inputText value="#{alumnoManagedBean.alumno.codigo}"></h:inputText>
+				
+				<h:outputText value="DNI"/>
+				<h:inputText value="#{alumnoManagedBean.alumno.dni}"></h:inputText>
+			
+				<h:outputText value="Edad"/>
+				<h:inputText value="#{alumnoManagedBean.alumno.edad}"></h:inputText>
+
+				
+				<h:outputText value="Fecha Nacimiento"/>
+				<h:inputText value="#{alumnoManagedBean.alumno.fechaNacimiento}">
+					<f:convertDateTime  pattern="dd/MM/yyyy" timeZone="GMT-5"></f:convertDateTime>
+				</h:inputText>
+				
+				<h:outputText value="Colegio"/>
+				<h:inputText value="#{alumnoManagedBean.alumno.colegio}"></h:inputText>
+			</h:panelGrid>	
+			
+			<h:commandButton value="Registrar" action="#{alumnoManagedBean.registrar}" />		
+		</h:form>		
+</html>

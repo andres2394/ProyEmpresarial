@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="">
+	<ui:define name="content">
+	    <h:form>
+			<h2>Mantener de Trámite</h2>
+			<h:panelGrid columns="2">
+		
+				<h:outputText value="Motivo:"/>
+				
+				<h:outputText value="Fecha de registro: " />
+				
+				<h:outputText value="Fecha de entrega: " />
+		
+			</h:panelGrid>
+			<!-- <h:commandButton value="Registrar" action="#{empleadoManagedBean.registrar}" /> -->
+		</h:form>
+		
+		
+		
+		<!--  
+		<h:dataTable value="#{empleadoManagedBean.empleados}" var="e" border="1">
+			<h:column>
+				<f:facet name="header">Id</f:facet>
+						#{e.id}
+					</h:column>
+			<h:column>
+				<f:facet name="header">Nombre</f:facet>
+						#{e.nombre}
+					</h:column>
+		
+		
+			<h:column>
+				<f:facet name="header">DNI</f:facet>
+						#{e.dni}
+					</h:column>
+		
+			<h:column>
+				<f:facet name="header">Fecha de Ingreso</f:facet>
+				<h:outputText value="#{e.dni}">
+					<f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
+				</h:outputText>
+		
+			</h:column>
+		
+			<h:column>
+				<f:facet name="header">Salario</f:facet>
+						#{e.salario}
+					</h:column>
+		</h:dataTable>-->
+	</ui:define>
+
+</ui:composition>
+</html>

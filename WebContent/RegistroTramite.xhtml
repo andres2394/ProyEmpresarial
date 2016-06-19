@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<!--  <ui:composition template="/WEB-INF/template/BasicTemplate.xhtml">-->
+	
+<!--	<ui:define name="content"> -->
+<!-- POR MODIFICAR -->
+<h:head>
+	<title>Solicitud de trámite</title>
+</h:head>
+<h:form>
+											<h2>Registro de trámite</h2><!--  <h2>Solicitud de renovación de carnet de estudios</h2>-->
+			
+			<h4>Datos personales:</h4>
+			<h:panelGrid columns="2">
+				
+
+				<h:outputText value="Fecha de solicitud: "></h:outputText>
+				<h:inputText value="#{tramiteManagedBean.tramite.fechaRegistro}" disabled="true">
+					<f:convertDateTime type="date" pattern="dd/MM/yyyy" timeZone="GMT-5"/>
+				</h:inputText>
+				
+				<h:outputText value="Código:"/>
+				<h:inputText value="i123456789" disabled="true" ></h:inputText>
+			
+				<h:outputText value="Alumno:"/>
+				<h:inputText value="Juan Perez" disabled="true"></h:inputText>
+				
+				<h:outputText value="Carrera:"/>
+				<h:inputText value="Computación e informática" disabled="true"></h:inputText>
+				
+				<h:outputText value="Tipo de pago:"/>
+				<h:selectOneRadio value="#{tramiteManagedBean.tramite.tipoPago}">
+		   			<f:selectItem itemValue="B" itemLabel="Cargar a la boleta" />
+		   			<f:selectItem itemValue="C" itemLabel="Pago en caja" />
+		   		</h:selectOneRadio>
+				
+				<h:outputText value="Fecha de entrega: " />
+				<h:inputText value="#{tramiteManagedBean.tramite.fechaEntrega}" converter="customDateConverterImpl" disabled="true">
+				</h:inputText>
+				
+				<h:outputText value="Motivo:"/>
+				<h:inputTextarea value="#{tramiteManagedBean.tramite.motivo}" cols="50" rows="10"></h:inputTextarea>
+	
+			</h:panelGrid>
+			
+			
+			<h:commandButton value="Registrar" action="#{tramiteManagedBean.registrar}" />
+</h:form>
+		
+<!--	</ui:define> -->
+
+<!--  </ui:composition>-->
+</html>
+
+
+<!--  <h:outputText value="#{tramiteManagedBean.tramite.fechaEntrega}" converter="customDateConverterImpl">
+				</h:outputText>-->
